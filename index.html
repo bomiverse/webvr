@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+
+  </head>
+  <body>
+    <a-scene background="color:black">
+      <!-- <a-sky color="grey"></a-sky> -->
+
+      <a-light
+      type="point"
+      position="4 4 -4"
+      color="gray"
+      intensity="5"
+      distance="50"
+      castShadow="true"
+      ></a-light>
+
+    <a-entity
+    gltf-model=""
+    position="0 1.5 -4"
+    ></a-entity>
+
+        <a-box
+        position="-1 0 -4"
+        radius="1.25"
+        color="purple"
+        shadow="cast:true;"
+        wireframe="false"
+        segments-width="8"
+        segments-height="8">
+
+            <a-animation
+            attribute="rotation"
+            dur="3000"
+            fill="forwards"
+            to="0 360 0"
+            repeat="indefinite"
+            ></a-animation>
+
+        </a-box>
+
+        <a-plane
+        width="40"
+        height="40"
+        color="purple"
+        position="0 -1 -4"
+        rotation="-90 0 0"
+        shadow="recieve:true;"
+        ></a-plane>
+
+
+
+
+    </a-scene>
+
+  </body>
+</html>
