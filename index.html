@@ -1,65 +1,106 @@
 <html>
   <head>
-    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+
+<script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+<script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+
 
   </head>
+
   <body>
     <a-scene background="color:black">
       <!-- <a-sky color="grey"></a-sky> -->
+
+  <a-assets>
+      <a-asset-item id="teddy.obj" src="models/teddy.obj"></a-asset-item>
+      <a-asset-item id="teddy.mtl" src="models/teddy.mtl"></a-asset-item>
+
+  </a-assets>
+
+
+
+ <a-entity id="happy-teddy"
+ obj-model="obj: models/teddy.obj; mtl: models/teddy.mtl"
+ position="-1 12 -4"
+ rotation="-90 90 -180"
+ scale="3 3 3"
+ animation="property: rotation;
+            to: -90 90 180;
+            dur: 5000;
+            easing: linear;
+            loop: true;">
+</a-entity>
+
+
 
       <a-light
       type="point"
       position="4 4 -4"
       color="gray"
-      intensity="5"
-      distance="50"
+      intensity="3"
+      distance="100"
       castShadow="true"
       ></a-light>
 
-    <a-entity
-    gltf-model=""
-    position="0 1.5 -4"
-    ></a-entity>
 
-        <a-box
-        position="-1 0 -4"
-        radius="1.25"
-        color="purple"
-        shadow="cast:true;"
-        wireframe="false"
-        segments-width="8"
-        segments-height="8">
+      <a-box
+      position="-1 0 -4"
+      radius="1.25"
+      color="#7556af"
+      shadow="cast:true;"
+      wireframe="false"
+      segments-width="8"
+      segments-height="8">
 
-            <a-animation
-            attribute="rotation"
-            dur="3000"
-            fill="forwards"
-            to="0 360 0"
-            repeat="indefinite"
-            ></a-animation>
+          <a-animation
+          attribute="rotation"
+          dur="3000"
+          fill="forwards"
+          to="0 360 0"
+          repeat="indefinite"
+          ></a-animation>
 
         </a-box>
 
         <a-plane
         width="40"
         height="40"
-        color="purple"
+        color="#7556af"
         position="0 -1 -4"
         rotation="-90 0 0"
+        opacity="1"
         shadow="recieve:true;"
         ></a-plane>
 
-        <a-sphere>
-          position="-1 0 -4"
-          radius="1.25"
-          color="purple"
-          shadow="cast:true;"
-          wireframe="false"
-          segments-width="8"
-          segments-height="8">
-        </a-sphere>
 
-        
+
+
+<a-entity
+position="0 1 -5"
+size="1"
+particle-system="color:#6956ad, #fcee85"
+maxAge="6"
+duration="1000"
+direction="1"
+accelerationSpread="10 0 10"
+accelerationValue="0 -10 0"
+particleCount="1000"
+opacity="1"
+velocitySpread="10 7 10"
+velocityValue="0 25 0"
+dragRandomize="true;"
+animation__c="property: material.color;
+                 to: #333333;
+                 dur: 1000;
+                 easing: linear;
+                 loop: true;"
+
+></a-entity>
+
+
+
+
+
 
 
 
