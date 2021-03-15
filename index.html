@@ -21,46 +21,69 @@
 
  <a-entity id="happy-teddy"
  obj-model="obj: models/teddy.obj; mtl: models/teddy.mtl"
- position="-1 12 -4"
+ position="-1 15 -4"
  rotation="-90 90 -180"
- scale="3 3 3"
+ scale="5 5 5"
+ emissive="lightgrey"
+ castShadow="true"
  animation="property: rotation;
             to: -90 90 180;
-            dur: 5000;
+            dur: 4000;
             easing: linear;
             loop: true;">
+            <a-light id= white type="point"
+            position="-0.5 -0.10 -1"
+            color="white"
+            intensity="3"
+            distance="11.1"
+            decay="0.2"
+            castShadow="true;"
+            shadowRadius="0.85"></a-light>
 </a-entity>
 
+<a-entity>
+   <a-light
+  type="point"
+  position="-1 4 -4"
+  color="purlpe"
+  intensity="0.5"
+  distance="500"
+  castShadow="true;"
+  ></a-light>
 
 
-      <a-light
-      type="point"
-      position="4 4 -4"
-      color="gray"
-      intensity="3"
-      distance="100"
-      castShadow="true"
-      ></a-light>
 
 
-      <a-box
-      position="-1 0 -4"
+
+
+
+      <a-sphere
+      position="-1 12 -4"
+      rotation="-90 90 -180"
       radius="1.25"
       color="#7556af"
       shadow="cast:true;"
       wireframe="false"
+      emissive="#7556af"
       segments-width="8"
-      segments-height="8">
+      segments-height="8"
+      animation="property: rotation;
+                 to: -90 90 180;
+                 dur: 5000;
+                 easing: linear;
+                 loop: true;">
+          <a-light id= red type="point"
+          position="-1 12 -4"
+          color="red"
+          intensity="3"
+          distance="9.5"
+          decay="0.2"
+          castShadow="true;"
+          shadowRadius="0.85"></a-light>
 
-          <a-animation
-          attribute="rotation"
-          dur="3000"
-          fill="forwards"
-          to="0 360 0"
-          repeat="indefinite"
-          ></a-animation>
+          ></a-sphere>
 
-        </a-box>
+
 
         <a-plane
         width="40"
@@ -76,19 +99,20 @@
 
 
 <a-entity
-position="0 1 -5"
+position="-1 1 -4"
 size="1"
 particle-system="color:#6956ad, #fcee85"
 maxAge="6"
-duration="1000"
+duration="null"
 direction="1"
+roatationAxis="0 180 0"
 accelerationSpread="10 0 10"
 accelerationValue="0 -10 0"
 particleCount="1000"
 opacity="1"
 velocitySpread="10 7 10"
 velocityValue="0 25 0"
-dragRandomize="true;"
+dragRandomize="true"
 animation__c="property: material.color;
                  to: #333333;
                  dur: 1000;
