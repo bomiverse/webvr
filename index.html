@@ -1,6 +1,8 @@
+
+<!DOCTYPE html>
 <html>
   <head>
-
+<meta charset="utf-8">
 <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
 <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
 
@@ -9,14 +11,42 @@
 
   <body>
     <a-scene background="color:black">
-      <!-- <a-sky color="grey"></a-sky> -->
+    <a-sky src="models/para.jpg"
+           geometry="radius: 100">
+
+    </a-sky>
+
 
   <a-assets>
       <a-asset-item id="teddy.obj" src="models/teddy.obj"></a-asset-item>
       <a-asset-item id="teddy.mtl" src="models/teddy.mtl"></a-asset-item>
-
+    <a-asset-item id="mirror.gltf" src="models/mirror.gltf"></a-asset-item>
+    <a-asset-item id="plz.obj" src="models/plz.obj"></a-asset-item>
+    <a-asset-item id="plz.mtl" src="models/plz.mtl"></a-asset-item>
   </a-assets>
 
+  <a-entity id="happy-plz"
+  obj-model="obj: models/plz.obj; mtl: models/plz.mtl"
+position="-8 -2 2"
+
+  >
+
+</a-entity>
+
+<a-entity id="mirror" glft-model="mirror.glff"
+ position="-1 0 -5"
+ gltf-model="models/mirror.gltf"
+ rotation="-90 90 -180"
+ scale="1 1 1"
+ emissive="lightgrey"
+ castShadow="true"
+ animation="property: rotation;
+            to: -90 90 180;
+            dur: 4000;
+            easing: linear;
+            loop: true;">
+
+></a-entity>
 
 
  <a-entity id="happy-teddy"
@@ -24,6 +54,7 @@
  position="-1 15 -4"
  rotation="-90 90 -180"
  scale="5 5 5"
+ material="metalness: 1"
  emissive="lightgrey"
  castShadow="true"
  animation="property: rotation;
@@ -36,20 +67,34 @@
             color="white"
             intensity="3"
             distance="11.1"
-            decay="0.2"
+            decay="0.28"
             castShadow="true;"
             shadowRadius="0.85"></a-light>
+            <a-light id= blue type="point"
+            position="-0.1 -0.10 -1"
+            color="blue"
+            intensity="3"
+            distance="11.1"
+            decay="0.28"
+            castShadow="true;"
+            shadowRadius="0.85"></a-light>
+
+
+
+
+
 </a-entity>
 
-<a-entity>
-   <a-light
-  type="point"
-  position="-1 4 -4"
-  color="purlpe"
-  intensity="0.5"
-  distance="500"
-  castShadow="true;"
-  ></a-light>
+
+  <a-light
+        type="point"
+        position="-1 4 -4"
+        color="purlpe"
+        intensity="0.5"
+        distance="500"
+        castShadow="true;"
+        ></a-light>
+
 
 
 
@@ -72,12 +117,12 @@
                  dur: 5000;
                  easing: linear;
                  loop: true;">
-          <a-light id= red type="point"
+          <a-light id= pink type="point"
           position="-1 12 -4"
-          color="red"
+          color="pink"
           intensity="3"
           distance="9.5"
-          decay="0.2"
+          decay="0.28"
           castShadow="true;"
           shadowRadius="0.85"></a-light>
 
@@ -99,7 +144,7 @@
 
 
 <a-entity
-position="-1 1 -4"
+position="-1 0.1 -10"
 size="1"
 particle-system="color:#6956ad, #fcee85"
 maxAge="6"
@@ -114,8 +159,8 @@ velocitySpread="10 7 10"
 velocityValue="0 25 0"
 dragRandomize="true"
 animation__c="property: material.color;
-                 to: #333333;
-                 dur: 1000;
+                 to: #bbe258;
+                 dur: 200;
                  easing: linear;
                  loop: true;"
 
