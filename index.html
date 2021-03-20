@@ -11,27 +11,33 @@
   <body>
     <a-scene background="color:black">
     <a-sky src="images/para.jpg"
+           rotation="-75 0 0"
            geometry="radius: 100">
 
     </a-sky>
 
 
   <a-assets>
-      <a-asset-item id="teddy.obj" src="models/teddy.obj"></a-asset-item>
-      <a-asset-item id="teddy.mtl" src="models/teddy.mtl"></a-asset-item>
+    <a-asset-item id="teddy.obj" src="models/teddy.obj"></a-asset-item>
+    <a-asset-item id="teddy.mtl" src="models/teddy.mtl"></a-asset-item>
     <a-asset-item id="mirror.gltf" src="models/mirror.gltf"></a-asset-item>
-    <a-asset-item id="room.obj" src="models/room.obj"></a-asset-item>
-    <a-asset-item id="room.mtl" src="models/room.mtl"></a-asset-item>
+    <a-asset-item id="ship.obj" src="models/ship.obj"></a-asset-item>
+    <a-asset-item id="ship.mtl" src="models/ship.mtl"></a-asset-item>
+
+
   </a-assets>
 
-  <a-entity id="happy-room"
-  obj-model="obj: models/room.obj; mtl: models/room.mtl"
-  scale="0.5 0.5 0.5"
-  position="-8 -2 2">
+
+  </a-entity>
+
+  <a-entity id="flower-ship"
+  obj-model="obj: models/ship.obj; mtl: models/ship.mtl"
+  scale="2 2 2"
+  position="-1 -2.8 -4">
 
 </a-entity>
 
-<a-entity id="mirror" glft-model="mirror.glff"
+<a-entity id="mirror" glft-model="mirror.gltf"
  position="-1 0 -5"
  gltf-model="models/mirror.gltf"
  rotation="-90 90 -180"
@@ -60,8 +66,6 @@
            roughness: 0.15;
            sphericalEnvMap: images/para.jpg;
            src: images/para.jpg;"
-
-
  emissive="lightgrey"
  castShadow="true"
  animation="property: rotation;
@@ -95,7 +99,7 @@
 
   <a-light
         type="point"
-        position="-1 4 -4"
+        position="-1 100 -4"
         color="purlpe"
         intensity="0.5"
         distance="500"
@@ -137,7 +141,7 @@
 
 
 
-        <a-plane
+        <!-- <a-plane
         width="40"
         height="40"
         color="#7556af"
@@ -145,7 +149,7 @@
         rotation="-90 0 0"
         opacity="1"
         shadow="recieve:true;"
-        ></a-plane>
+        ></a-plane> -->
 
 
 
