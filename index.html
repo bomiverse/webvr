@@ -27,34 +27,20 @@
 
   </a-assets>
 
-
-  </a-entity>
+<a-entity camera=""
+          position="0 1.6 10"
+          wasd-controls="" rotation="5.91313490489988 72.19268218648399"
+          look-controls="" aframe-injected=""
+          data-aframe-inspector-original-camera=""
+></a-entity>
 
   <a-entity id="flower-ship"
   obj-model="obj: models/ship.obj; mtl: models/ship.mtl"
   scale="2 2 2"
-  position="-1 -2.8 -4">
+  position="-1 -2.8 -4"
+  ></a-entity>
 
-</a-entity>
 
-<a-entity id="mirror" glft-model="mirror.gltf"
- position="-1 0 -5"
- gltf-model="models/mirror.gltf"
- rotation="-90 90 -180"
- scale="1 1 1"
- emissive="lightgrey"
- castShadow="true"
- material="metalness: 1;
-           roughness: 0.15;
-           sphericalEnvMap: images/para.jpg;
-           src: images/para.jpg;"
- animation="property: rotation;
-            to: -90 90 180;
-            dur: 4000;
-            easing: linear;
-            loop: true;">
-
-></a-entity>
 
 
  <a-entity id="happy-teddy"
@@ -81,26 +67,53 @@
             decay="0.3"
             castShadow="true;"
             shadowRadius="0.85"></a-light>
-            <a-light id= blue type="point"
+            <a-light id= pink type="point"
             position="-0.1 -0.10 -1"
-            color="blue"
-            intensity="3"
+            color="#ff20b1"
+            intensity="7"
             distance="11.1"
             decay="0.28"
             castShadow="true;"
             shadowRadius="0.85"></a-light>
-
-
-
-
+            <a-light id= yellow type="spot"
+            position="2.1 -1.7 -2.5"
+            color="#ffc600"
+            intensity="1"
+            distance="15.2"
+            decay="0.1"
+            castShadow="true;"
+            shadowRadius="0.85"></a-light>
+            <a-light id= green type="point"
+            position="0.63 0.56 -0.8"
+            color="#1de249"
+            intensity="1"
+            distance="12.7"
+            decay="0.1"
+            castShadow="true;"
+            shadowRadius="0.85"></a-light>
+            <a-light id= red type="spot"
+            position="-1.45 0.6 -2"
+            color="#ff0006"
+            intensity="1"
+            distance="28.7"
+            decay="0.56"
+            castShadow="true;"
+            shadowRadius="0.85"></a-light>
 
 </a-entity>
 
-
-  <a-light
+<a-light
         type="point"
         position="-1 100 -4"
-        color="purlpe"
+        color="#e1d7ff"
+        intensity="1"
+        distance="500"
+        castShadow="true;"
+        ></a-light>
+<a-light
+        type="point"
+        position="-1 -100 -4"
+        color="#e1d7ff"
         intensity="0.5"
         distance="500"
         castShadow="true;"
@@ -109,13 +122,9 @@
 
 
 
-
-
-
-
       <a-sphere
       position="-1 12 -4"
-      rotation="-90 90 -180"
+      rotation="-90 90 180"
       radius="1.25"
       color="#7556af"
       shadow="cast:true;"
@@ -124,13 +133,13 @@
       segments-width="8"
       segments-height="8"
       animation="property: rotation;
-                 to: -90 90 180;
+                 to: -90 90 -180;
                  dur: 5000;
                  easing: linear;
                  loop: true;">
-          <a-light id= pink type="point"
+          <a-light id= light type="point"
           position="-1 12 -4"
-          color="pink"
+          color="#ffaebc"
           intensity="3"
           distance="9.5"
           decay="0.28"
@@ -152,12 +161,31 @@
         ></a-plane> -->
 
 
+      </a-entity>
 
+      <a-entity id="mirror" glft-model="mirror.gltf"
+       position="-1 0 -5"
+       gltf-model="models/mirror.gltf"
+       rotation="0 180 0"
+       scale="1 1 1"
+       emissive="lightgrey"
+       castShadow="true"
+       material="metalness: 1;
+                 roughness: 0.15;
+                 sphericalEnvMap: images/para.jpg;
+                 src: images/para.jpg;"
+       animation="property: rotation;
+                  to: 0 -180 0;
+                  dur: 4000;
+                  easing: linear;
+                  loop: true;"
 
-<a-entity
-position="-4.5 3.2 -4.1"
+      ></a-entity>
+
+<a-entity id="magenta"
+position="20.4 -0.44 10.6"
 size="1"
-particle-system="color:#6956ad, #fcee85"
+particle-system="color:#5502ef, #fcee85"
 maxAge="6"
 duration="null"
 direction="1"
@@ -165,23 +193,74 @@ roatationAxis="0 180 0"
 accelerationSpread="10 0 10"
 accelerationValue="0 -10 0"
 particleCount="1000"
-opacity="1"
 velocitySpread="10 7 10"
 velocityValue="0 25 0"
 dragRandomize="true"
-animation__c="property: material.color;
-                 to: #bbe258;
-                 dur: 200;
-                 easing: linear;
-                 loop: true;"
-
 ></a-entity>
 
+<a-entity id="orange"
+position="19.8 -0.44 -19.56"
+size="1"
+particle-system="color:#ef7d02, #fcee85"
+maxAge="6"
+duration="null"
+direction="1"
+roatationAxis="0 180 0"
+accelerationSpread="10 0 10"
+accelerationValue="0 -10 0"
+particleCount="1000"
+velocitySpread="10 7 10"
+velocityValue="0 25 0"
+dragRandomize="true"
+></a-entity>
 
+<a-entity id="cyan"
+position="-9.2 -0.44 -28.61"
+size="1"
+particle-system="color:#04f9e9, #fcee85"
+maxAge="6"
+duration="null"
+direction="1"
+roatationAxis="0 180 0"
+accelerationSpread="10 0 10"
+accelerationValue="0 -10 0"
+particleCount="1000"
+velocitySpread="10 7 10"
+velocityValue="0 25 0"
+dragRandomize="true"
+></a-entity>
 
+<a-entity id="cobalt"
+position="-26.9 -0.44 -4"
+size="1"
+particle-system="color:#003ab7, #003ab7"
+maxAge="6"
+duration="null"
+direction="1"
+roatationAxis="0 180 0"
+accelerationSpread="10 0 10"
+accelerationValue="0 -10 0"
+particleCount="1000"
+velocitySpread="10 7 10"
+velocityValue="0 25 0"
+dragRandomize="true"
+></a-entity>
 
-
-
+<a-entity id="lime"
+position="-8.9 -0.44 20.9"
+size="1"
+particle-system="color:#95f702, #fcee85"
+maxAge="6"
+duration="null"
+direction="1"
+roatationAxis="0 180 0"
+accelerationSpread="10 0 10"
+accelerationValue="0 -10 0"
+particleCount="1000"
+velocitySpread="10 7 10"
+velocityValue="0 25 0"
+dragRandomize="true"
+></a-entity>
 
 
 
