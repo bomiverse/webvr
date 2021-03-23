@@ -9,37 +9,37 @@
   </head>
 
   <body>
-    <a-scene background="color:black">
+    <a-scene>
+
     <a-sky src="images/para.jpg"
            rotation="-75 0 0"
            geometry="radius: 100">
-
     </a-sky>
 
+<a-sound src="sound/nappa.mp3" autoplay="true"></a-sound>
 
   <a-assets>
+
     <a-asset-item id="teddy.obj" src="models/teddy.obj"></a-asset-item>
     <a-asset-item id="teddy.mtl" src="models/teddy.mtl"></a-asset-item>
     <a-asset-item id="mirror.gltf" src="models/mirror.gltf"></a-asset-item>
     <a-asset-item id="ship.obj" src="models/ship.obj"></a-asset-item>
     <a-asset-item id="ship.mtl" src="models/ship.mtl"></a-asset-item>
 
-
   </a-assets>
 
-<a-entity camera=""
-          position="0 1.6 10"
-          wasd-controls="" rotation="5.91313490489988 72.19268218648399"
+<a-entity camera look-controls position="0 1.6 15"
+          wasd-controls="" rotation="0.8 17"
           look-controls="" aframe-injected=""
           data-aframe-inspector-original-camera=""
 ></a-entity>
+
 
   <a-entity id="flower-ship"
   obj-model="obj: models/ship.obj; mtl: models/ship.mtl"
   scale="2 2 2"
   position="-1 -2.8 -4"
   ></a-entity>
-
 
 
 
@@ -219,7 +219,6 @@ accelerationValue="0 -10 0"
 particleCount="1000"
 velocitySpread="10 7 10"
 velocityValue="0 25 0"
-dragRandomize="true"
 ></a-entity>
 
 <a-entity id="orange"
@@ -235,7 +234,6 @@ accelerationValue="0 -10 0"
 particleCount="1000"
 velocitySpread="10 7 10"
 velocityValue="0 25 0"
-dragRandomize="true"
 ></a-entity>
 
 <a-entity id="cyan"
@@ -251,7 +249,6 @@ accelerationValue="0 -10 0"
 particleCount="1000"
 velocitySpread="10 7 10"
 velocityValue="0 25 0"
-dragRandomize="true"
 ></a-entity>
 
 <a-entity id="cobalt"
@@ -267,7 +264,6 @@ accelerationValue="0 -10 0"
 particleCount="1000"
 velocitySpread="10 7 10"
 velocityValue="0 25 0"
-dragRandomize="true"
 ></a-entity>
 
 <a-entity id="lime"
@@ -283,7 +279,6 @@ accelerationValue="0 -10 0"
 particleCount="1000"
 velocitySpread="10 7 10"
 velocityValue="0 25 0"
-dragRandomize="true"
 ></a-entity>
 
 
